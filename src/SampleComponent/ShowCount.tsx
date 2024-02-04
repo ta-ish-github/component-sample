@@ -8,7 +8,6 @@ const ShowCount = (props: { url: string }) => {
   const [memberCount, setMemberCount] = useState<number>(0);
   const [isComplete, setComplete] = useState(false);
   axios
-    // .get('https://scrum-room-api.onrender.com/health')
     .get(props.url)
     .then((d) => {
       console.log(d);
