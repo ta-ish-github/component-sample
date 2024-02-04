@@ -11,4 +11,18 @@ type SampleComponentProps = {
 };
 declare const SampleComponent: (props: SampleComponentProps) => React.JSX.Element;
 
-export { ButtonTest, type ButtonTestProps, SampleComponent, type SampleComponentProps };
+type SampleComponent2Setting = {
+    url: string;
+};
+
+type SampleComponent2Props = {
+    title: string;
+};
+declare const SampleComponent2: (props: SampleComponent2Props) => React.JSX.Element;
+
+declare const SampleComponentProvider: (props: {
+    setting: SampleComponent2Setting;
+    children: React.ReactNode;
+}) => React.JSX.Element;
+
+export { ButtonTest, type ButtonTestProps, SampleComponent, SampleComponent2, type SampleComponent2Props, type SampleComponent2Setting, type SampleComponentProps, SampleComponentProvider };
